@@ -1,0 +1,31 @@
+tarator@temp-mon:/sys/bus/w1 $ tree .
+.
+├── devices
+│   ├── 28-01186e4edfff -> ../../../devices/w1_bus_master1/28-01186e4edfff
+│   ├── 28-0417333777ff -> ../../../devices/w1_bus_master1/28-0417333777ff
+│   ├── 28-3c01d0751078 -> ../../../devices/w1_bus_master1/28-3c01d0751078
+│   ├── 28-3c01d075ed82 -> ../../../devices/w1_bus_master1/28-3c01d075ed82
+│   └── w1_bus_master1 -> ../../../devices/w1_bus_master1
+├── drivers
+│   ├── w1_master_driver
+│   │   ├── bind
+│   │   ├── uevent
+│   │   ├── unbind
+│   │   └── w1_bus_master1 -> ../../../../devices/w1_bus_master1
+│   └── w1_slave_driver
+│       ├── 28-01186e4edfff -> ../../../../devices/w1_bus_master1/28-01186e4edfff
+│       ├── 28-0417333777ff -> ../../../../devices/w1_bus_master1/28-0417333777ff
+│       ├── 28-3c01d0751078 -> ../../../../devices/w1_bus_master1/28-3c01d0751078
+│       ├── 28-3c01d075ed82 -> ../../../../devices/w1_bus_master1/28-3c01d075ed82
+│       ├── bind
+│       ├── uevent
+│       └── unbind
+├── drivers_autoprobe
+├── drivers_probe
+└── uevent
+
+14 directories, 9 files
+
+tarator@temp-mon:~ $ cat /sys/bus/w1/devices/28-01186e4edfff/temperature 
+25250
+
