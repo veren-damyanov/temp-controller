@@ -1,2 +1,8 @@
+# Runtime
 sanic
 aiofiles
+
+# Development
+flake8
+isort
+black
